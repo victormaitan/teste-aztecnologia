@@ -17,6 +17,10 @@ export default createStore({
       state.token = payload
       window.sessionStorage.setItem('token', JSON.stringify(payload))
     },
+    removeToken (state) {
+      state.token = null
+      window.sessionStorage.clear()
+    },
     setCandidates (state, payload) {
       state.candidates = payload
     },
@@ -27,6 +31,9 @@ export default createStore({
   actions: {
     setToken (context, payload) {
       context.commit('setToken', payload)
+    },
+    removeToken (context) {
+      context.commit('removeToken')
     },
     setCandidates (context, payload) {
       context.commit('setCandidates', payload)

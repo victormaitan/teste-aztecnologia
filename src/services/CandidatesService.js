@@ -6,7 +6,7 @@ export default class CandidatesService {
   }
 
   async FetchCandidates(payload) {
-    return await this._httpService.get('/users?delay=3', payload);
+    return await this._httpService.get(`/users?delay=3&page=${payload.page}`);
   }
 
   async RegisterCandidate(payload) {

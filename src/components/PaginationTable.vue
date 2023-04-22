@@ -1,17 +1,23 @@
 <template>
   <ul class="page">
     <li class="page__btn"><img src="../assets/icons/chevron-left.svg" class="icon" /></li>
-    <li :class="`page__numbers ${pagination.page === page ? 'active' : '' }`" v-for="(page, index) in pagination.total_pages" :key="index" @click="fetchCandidates({ page: page })">
-      {{ page }}
-    </li>
+    <div v-for="(page, index) in pagination.total_pages" :key="index">
+      <li
+        :class="`page__numbers ${pagination.page === page ? 'active' : ''}`"
+        @click="fetchCandidates({ page: index + 1 })"
+      >
+        {{ page }}
+      </li>
+    </div>
     <li class="page__btn"><img src="../assets/icons/chevron-right.svg" class="icon" /></li>
   </ul>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import CandidatesService from '../services/CandidatesService.js'
 export default {
-  data () {
+  data() {
     return {
       pagination: {
         page: 1,
@@ -21,18 +27,29 @@ export default {
       }
     }
   },
-  async mounted () {
+  async mounted() {
+    this.candidatesService = new CandidatesService()
     this.pagination = await this.getPagination
   },
   computed: {
     ...mapGetters(['getPagination'])
   },
+  watch: {
+    getPagination(value) {
+      this.pagination = value
+    }
+  },
   methods: {
     ...mapActions(['setCandidates', 'setPagination']),
-    fetchCandidates(payload) {
-      this.candidatesService.FetchCandidates(payload).then((payload) => {
+    async fetchCandidates(pagination) {
+      this.$emit('isLoading', true)
+      await this.candidatesService.FetchCandidates(pagination).then((payload) => {
+        this.$emit('isLoading', false)
         this.setCandidates(payload.data.data)
         this.setPagination(payload.data)
+        this.pagination = this.getPagination
+      }).catch(() => {
+        this.$emit('isLoading', false)
       })
     }
   }

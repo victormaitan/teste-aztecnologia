@@ -1,10 +1,16 @@
 <template>
   <div class="layout loginBackground">
     <img class="logo" src="../assets/logoFull.png" alt="Logo AZ Tecnologia" />
+    <button class="btn-exit" @click.prevent="logout()">
+      <img src="../assets/icons/exit.svg" class="icon" />
+    </button>
   </div>
-  <Loading class="layout" v-if="isLoading" style="margin-top: 40px; height: 85vh" />
-  <div v-else class="container">
-    <h2>Candidatos</h2>
+  <Loading class="layout" v-show="isLoading" style="margin-top: 40px; height: 85vh" />
+  <div v-show="!isLoading" class="container">
+    <div class="headerActions">
+      <h2>Candidatos</h2>
+      <button class="btn" @click.prevent="logout()">Novo Candidato</button>
+    </div>
     <ul class="responsive-table">
       <li class="table-header">
         <div class="col col-1">ID</div>
@@ -36,7 +42,7 @@
         </div>
       </li>
     </ul>
-    <Pagination />
+    <Pagination @isLoading="(value) => (isLoading = value)"/>
   </div>
 </template>
 
@@ -45,40 +51,59 @@ import { mapActions, mapGetters } from 'vuex'
 import CandidatesService from '../services/CandidatesService.js'
 import Pagination from '../components/PaginationTable.vue'
 import Loading from '../components/LoadingSpinner.vue'
+import { notify } from '../utils/functions.js'
 
 export default {
-  name: 'MainLayout',
+  name: 'HomeView',
   components: { Pagination, Loading },
   data() {
     return {
-      candidates: [],
       isLoading: false
     }
   },
   mounted() {
     this.candidatesService = new CandidatesService()
-    this.fetchCandidates()
+    this.fetchCandidates({ page: 1 })
   },
   computed: {
     ...mapGetters(['getCandidates'])
   },
   methods: {
-    ...mapActions(['setCandidates', 'setPagination']),
+    ...mapActions(['setCandidates', 'setPagination', 'removeToken']),
     fetchCandidates(payload) {
       this.isLoading = true
-      this.candidatesService.FetchCandidates(payload).then((payload) => {
+      this.candidatesService
+        .FetchCandidates(payload)
+        .then((payload) => {
+          this.isLoading = false
+          this.setCandidates(payload.data.data)
+          this.setPagination(payload.data)
+        })
+        .catch(() => {
+          this.isLoading = false
+        })
+    },
+    logout () {
+      this.isLoading = true
+      this.removeToken()
+      setTimeout(() => {
+        notify('Desconectado com sucesso!', ' ', 'success')
         this.isLoading = false
-        this.setCandidates(payload.data.data)
-        this.setPagination(payload.data)
-      }).catch(() => {
-        this.isLoading = false
-      })
+        this.$router.push('/')
+      }, 3000);
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.headerActions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .actions {
   display: flex;
   flex-direction: row;
@@ -198,7 +223,7 @@ h2 {
         color: #ff8000;
         padding-right: 10px;
         content: attr(data-label);
-        flex-basis: 50%;
+        flex-basis: 40%;
         text-align: right;
       }
     }

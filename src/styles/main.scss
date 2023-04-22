@@ -14,6 +14,7 @@ a,
 
 .btn {
   background: hsl(30, 93%, 46%);
+  height: 40px;
   color: #fff;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -24,9 +25,11 @@ a,
   padding: 0.7rem 2rem;
   border: none;
   margin: 5px;
+  cursor: pointer;
 }
 
 .btn-flat {
+  cursor: pointer;
   background: hsla(30, 93%, 46%, 0);
   color: #fff;
   border-radius: 5px;
@@ -41,6 +44,7 @@ a,
 }
 
 .btn-actions {
+  cursor: pointer;
   background: hsla(30, 93%, 46%, 0);
   color: #fff;
   border-radius: 5px;
@@ -54,7 +58,26 @@ a,
   margin: 0px;
 }
 
+.btn-exit {
+  cursor: pointer;
+  background: hsla(0, 0%, 100%, 0.233);
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  padding: 0.1rem 0.5rem;
+  border: none;
+  position: absolute;
+  right: 10px;
+  // z-index: 99;
+  margin: 0px;
+}
+
 .btn-rounded {
+  cursor: pointer;
   color: #fff;
   background-color: #fff;
   border-radius: 50px;

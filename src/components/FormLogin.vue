@@ -54,6 +54,7 @@ export default {
           this.setToken(payload.data.token)
           this.$emit('isLoading', false)
           notify('Bem-vindo', 'Login realizado com sucesso!', 'success')
+          this.$router.push('/home')
         })
         .catch(() => {
           this.$emit('isLoading', false)

@@ -2,17 +2,17 @@
   <div class="loginBackground">
     <AppLogo />
     <Loading v-show="isLoading" style="margin-top: 40px" />
-    <FormLogin v-show="!isLoading" @isLoading="(value) => (isLoading = value)" />
+    <FormRegister v-show="!isLoading" @isLoading="(value) => (isLoading = value)" />
   </div>
 </template>
 
 <script>
 import AppLogo from '../components/AppLogo.vue'
-import FormLogin from '../components/FormLogin.vue'
+import FormRegister from '../components/FormRegister.vue'
 import Loading from '../components/LoadingSpinner.vue'
 
 export default {
-  components: { Loading, AppLogo, FormLogin },
+  components: { Loading, AppLogo, FormRegister },
   data() {
     return {
       isLoading: false

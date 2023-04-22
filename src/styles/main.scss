@@ -2,6 +2,7 @@
 
 #app {
   font-weight: normal;
+  color: #fff;
 }
 
 a,
@@ -23,6 +24,34 @@ a,
   padding: 0.7rem 2rem;
   border: none;
   margin: 5px;
+}
+
+.btn-flat {
+  background: hsla(30, 93%, 46%, 0);
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  padding: 0.7rem 2rem;
+  border: none;
+  margin: 5px;
+}
+
+.btn-actions {
+  background: hsla(30, 93%, 46%, 0);
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  padding: 0.1rem 0.5rem;
+  border: none;
+  margin: 0px;
 }
 
 .btn-rounded {

@@ -2,18 +2,14 @@
 import HttpService from './HttpService.js';
 export default class LoginService {
   constructor() {/* eslint-disable */
-    this._httpService = new HttpService(`login`);
-  }
-
-  async FindAccreditedBySpecialityId(specialityId) {
-    return await this._httpService.get('/telemedicine/accredited', { specialityId });
+    this._httpService = new HttpService(``);
   }
 
   async SignIn(payload) {
-    return await this._httpService.post('/', payload);
+    return await this._httpService.post('/login', payload);
   }
 
-  async CreateURLTelemedicineDuty(holderCpf, cpf) {
-    return await this._httpService.post(`/telemedicine/request/duty?holderCpf=${holderCpf}&cpf=${cpf}`);
+  async SignUp(payload) {
+    return await this._httpService.post('/register', payload);
   }
 }

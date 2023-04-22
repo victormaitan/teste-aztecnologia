@@ -1,0 +1,79 @@
+@import './base.scss';
+
+#app {
+  font-weight: normal;
+}
+
+a,
+.primary {
+  text-decoration: none;
+  color: hsl(30, 100%, 50%);
+  transition: 0.4s;
+}
+
+.btn {
+  background: hsl(30, 93%, 46%);
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  padding: 0.7rem 2rem;
+  border: none;
+  margin: 5px;
+}
+
+.btn-rounded {
+  color: #fff;
+  background-color: #fff;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  outline: none;
+  border: none;
+  margin: 5px;
+}
+
+.input {
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  outline: none;
+}
+
+.input-password {
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  height: 30px;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  outline: none;
+}
+
+.passwordContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25em 0.5em;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(30, 100%, 50%, 0.2);
+  }
+}

@@ -127,7 +127,7 @@ Gostaria de expressar minha gratidão pela oportunidade de participar do process
 
 Foi uma experiência muito positiva e enriquecedora, onde pude aplicar meus conhecimentos, conhecer melhor a empresa e o perfil de profissional que vocês buscam.
 
-Gostaria de agradecer também pela atenção e pelo tratamento respeitoso e profissional durante todo o processo. Fiquei muito satisfeito(a) em saber que minha candidatura foi considerada e avaliada cuidadosamente.
+Gostaria de agradecer também pela atenção e pelo tratamento respeitoso e profissional durante todo o processo. Fiquei muito satisfeito em saber que minha candidatura foi considerada e avaliada cuidadosamente.
 
 Independentemente do resultado, gostaria de deixar claro que estou muito feliz por ter tido a oportunidade de me candidatar e de participar deste processo seletivo. 
 

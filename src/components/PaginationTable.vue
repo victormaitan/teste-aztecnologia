@@ -1,7 +1,7 @@
 <template>
   <ul class="page">
     <li class="page__btn"><img src="../assets/icons/chevron-left.svg" class="icon" /></li>
-    <div v-for="(page, index) in pagination.total_pages" :key="index">
+    <div v-for="(page, index) in pagination?.total_pages" :key="index">
       <li
         :class="`page__numbers ${pagination.page === page ? 'active' : ''}`"
         @click="fetchCandidates({ page: index + 1 })"

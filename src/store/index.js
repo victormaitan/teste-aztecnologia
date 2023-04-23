@@ -4,12 +4,16 @@ export default createStore({
   state: {
     token: null,
     pagination: null,
-    candidates: []
+    candidates: [],
+    editCandidate: {},
+    deleteCandidate: null
   },
   getters: {
     getCandidates (state) { return state.candidates },
+    getCandidate (state) { return state.editCandidate },
     getPagination (state) { return state.pagination },
     getToken (state) { return state.token },
+    getDeleteId (state) { return state.deleteCandidate },
     isAuthenticated (state) { return !!state.token },
   },
   mutations: {
@@ -26,6 +30,12 @@ export default createStore({
     },
     setPagination (state, payload) {
       state.pagination = payload
+    },
+    setCandidate (state, payload) {
+      state.editCandidate = payload
+    },
+    setDeleteCandidate (state, id) {
+      state.deleteCandidate = id
     }
   },
   actions: {
@@ -40,6 +50,12 @@ export default createStore({
     },
     setPagination (context, payload) {
       context.commit('setPagination', payload)
+    },
+    editCandidate (context, payload) {
+      context.commit('setCandidate', payload)
+    },
+    setDeleteCandidate (context, id) {
+      context.commit('setDeleteCandidate', id)
     }
   },
 })

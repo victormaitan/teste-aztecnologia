@@ -8,7 +8,7 @@
       <div class="col col-5">Ações</div>
     </li>
     <li class="table-row" v-for="(candidate, index) in getCandidates" :key="index">
-      <div class="col col-1" data-label="Identificação" style="margin-left: 10px">
+      <div class="col col-1" data-label="Identif." style="margin-left: 15px">
         {{ candidate.id }}
       </div>
       <div class="col col-2" data-label="Nome">
@@ -18,7 +18,7 @@
       <div class="col col-4" data-label="Foto">
         <img class="avatar" :src="candidate.avatar" alt="Avatar do candidato" />
       </div>
-      <div class="col col-5" data-label="Actions">
+      <div class="col col-5" data-label="Ações">
         <div class="actions">
           <button class="btn-actions" @click.prevent="updateCandidate(candidate)">
             <img src="../assets/icons/edit.svg" class="icon" />
@@ -145,10 +145,10 @@ export default {
     }
     .col {
       display: flex;
-      padding: 10px 0;
+      padding: 5px 0;
       &:before {
         color: #ff8000;
-        padding-right: 10px;
+        padding-right: 15px;
         content: attr(data-label);
         flex-basis: 40%;
         text-align: right;

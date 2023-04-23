@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="logo" src="../assets/logoFull.png" alt="Logo AZ Tecnologia" />
+    <img class="logo" src="../assets/logoFull.png" alt="Logo AZ Jobs" />
   </div>
 </template>
 

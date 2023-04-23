@@ -1,35 +1,145 @@
-# azJobs
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+# AZ Jobs - Sistema de Cadastro de Candidatos Interessados para Vagas de Emprego
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![image](./src/assets/logoFull.png)
 
-## Customize configuration
+<br/>
+<a href="https://azjobs.vercel.app"><img src="https://img.shields.io/badge/-Acessar AZ Jobs-b55800?style=for-the-badge&logo=Vue.js&logoColor=25CA0F" /></a>
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Obrigado a toda equipe da **AZ Tecnologia** pela oportunidade de demonstrar meus conhecimentos.
 
-## Project Setup
+Este repositório contém o código-fonte de um sistema de cadastro de candidatos para vagas de emprego. O sistema foi desenvolvido utilizando a linguagem de programação JavaScript e o framework Vue.js para a construção da interface web.
 
-```sh
-npm install
-```
+O objetivo do sistema é facilitar e organizar o processo de seleção de candidatos para vagas de emprego. Ele permite que os recrutadores criem e gerenciem os candidatos.
 
-### Compile and Hot-Reload for Development
+## Funcionalidades
 
-```sh
-npm run dev
-```
+- Criação de conta;
+- Cadastro, edição, exclusão e listagem de candidatos;
 
-### Compile and Minify for Production
+## Pré-requisitos do projeto
 
-```sh
-npm run build
-```
+Antes de executar o sistema, é necessário ter instalado os seguintes softwares:
 
-### Lint with [ESLint](https://eslint.org/)
+- Node 12.x ou mais recente
+- Vue.js
 
-```sh
-npm run lint
-```
+## Executando o Sistema
+
+Para executar o sistema, siga os seguintes passos:
+
+1. Clone o repositório para a sua máquina local:
+
+   ```
+   git clone https://github.com/victormaitan/teste-aztecnologia.git
+   ```
+
+2. Acesse o diretório do projeto:
+
+   ```
+   cd teste-aztecnologia
+   ```
+
+3. Instale as dependências do projeto:
+
+   ```
+   npm install
+   ```
+
+4. Execute o script de inicialização:
+
+   ```
+   npm run dev
+   ```
+
+5. Acesse o sistema em um navegador web:
+
+   ```
+   http://127.0.0.1:5173/
+   ```
+<br/>
+
+# **Desafio**:
+
+## Persona
+Karen é responsável por contratar novos funcionários para a empresa onde
+trabalha. Ela utiliza o email para receber os dados solicitados aos candidatos interessados na vaga.
+<br/>
+
+## Problema
+Karen precisa analisar todos os dados enviados pelos candidatos, para isso ela entra em todos os emails e faz a devida análise.
+
+O problema é que Karen recebe muitos emails além dos enviados pelos candidatos e isso deixa sua caixa de entrada bastante desorganizada. Agora ela precisa ficar pesquisando na sua conta todos os emails que possuem o assunto “Vaga”.
+
+Temos os serviços necessários para resolver inicialmente o problema, agora
+precisamos de você para criar a interface do sistema.
+<br/>
+
+
+## O que você deverá fazer:
+
+Criar uma interface onde Karen possa criar, listar, editar e deletar as informações dos candidatos interessados nas vagas.
+
+## :pencil: Requisitos
+
+:white_check_mark: - Você pode utilizar os https://reqres.in/ para consultar os serviços necessários e atender aos requisitos  
+:white_check_mark: - Dê a opção de selecionar a página (paginação) 
+:white_check_mark: - Na exclusão, mostre um modal de confirmação, antes de excluir.
+:white_check_mark: - Mostre um alert de sucesso na interface depois de executar as ações de create, update e delete 
+:white_check_mark: - Use o serviços de login
+:white_check_mark: - Utilize o axios para consumir os serviços
+:white_check_mark: - Você deverá desenvolver a interface utilizando o Vuejs.
+:white_check_mark: - A interface deve ser responsiva para qualquer tela
+:white_check_mark: - A estilização deve ser feita sem o uso de qualquer framework
+:white_check_mark: - É desejável que utilize Vuex para armazenar o estado da paginação e o token de autenticação.
+:x: - Implemente os testes unitários utilizando o Jest e o Vue Test Utils
+:white_check_mark: - Utilize o npm como gerenciador de pacotes
+:white_check_mark: - Disponibilize o código em um repositório no github.
+:white_check_mark: - Publique o front na web, como sugestão: https://vercel.com/
+ 
+## Screenshots
+
+#### WEB-DESKTOP
+
+  
+
+![image](./src/assets/prints/desktop1.png)
+
+  
+
+![image](./src/assets/prints/desktop2.png)
+
+#### WEB-MOBILE
+
+  
+
+![image](./src/assets/prints/mobile1.png)
+
+  
+
+![image](./src/assets/prints/mobile2.png)
+
+
+## Agradecimentos
+
+Gostaria de expressar minha gratidão pela oportunidade de participar do processo seletivo para DESENVOLVEDOR FRONT-END PLENO em da AZ Tecnologia. 
+
+Foi uma experiência muito positiva e enriquecedora, onde pude aplicar meus conhecimentos, conhecer melhor a empresa e o perfil de profissional que vocês buscam.
+
+Gostaria de agradecer também pela atenção e pelo tratamento respeitoso e profissional durante todo o processo. Fiquei muito satisfeito(a) em saber que minha candidatura foi considerada e avaliada cuidadosamente.
+
+Independentemente do resultado, gostaria de deixar claro que estou muito feliz por ter tido a oportunidade de me candidatar e de participar deste processo seletivo. 
+
+Agradeço novamente pela oportunidade e espero que possamos nos manter em contato em breve.
+
+Atenciosamente,
+
+Victor M Maitan - Engenheiro de Software e Desenvolvedor Front-end
+<br/>
+![image](./src/assets/logo.svg)
+<br/>
+
+## Licença
+
+Este projeto é licenciado sob a licença MIT.

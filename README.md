@@ -135,7 +135,7 @@ Agradeço novamente pela oportunidade e espero que possamos nos manter em contat
 
 Atenciosamente,
 
-Victor M Maitan - Engenheiro de Software e Desenvolvedor Front-end
+Victor M Maitan - Engenheiro de Software e Desenvolvedor Front-end<br/>
 <br/>
 ![image](./src/assets/logo.svg)
 <br/>

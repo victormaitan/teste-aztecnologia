@@ -83,20 +83,20 @@ Criar uma interface onde Karen possa criar, listar, editar e deletar as informa�
 
 ## :pencil: Requisitos
 
-:white_check_mark: - Você pode utilizar os https://reqres.in/ para consultar os serviços necessários e atender aos requisitos  
-:white_check_mark: - Dê a opção de selecionar a página (paginação) 
-:white_check_mark: - Na exclusão, mostre um modal de confirmação, antes de excluir.
-:white_check_mark: - Mostre um alert de sucesso na interface depois de executar as ações de create, update e delete 
-:white_check_mark: - Use o serviços de login
-:white_check_mark: - Utilize o axios para consumir os serviços
-:white_check_mark: - Você deverá desenvolver a interface utilizando o Vuejs.
-:white_check_mark: - A interface deve ser responsiva para qualquer tela
-:white_check_mark: - A estilização deve ser feita sem o uso de qualquer framework
-:white_check_mark: - É desejável que utilize Vuex para armazenar o estado da paginação e o token de autenticação.
-:x: - Implemente os testes unitários utilizando o Jest e o Vue Test Utils
-:white_check_mark: - Utilize o npm como gerenciador de pacotes
-:white_check_mark: - Disponibilize o código em um repositório no github.
-:white_check_mark: - Publique o front na web, como sugestão: https://vercel.com/
+:white_check_mark: - Você pode utilizar os https://reqres.in/ para consultar os serviços necessários e atender aos requisitos<br/>
+:white_check_mark: - Dê a opção de selecionar a página (paginação) <br/>
+:white_check_mark: - Na exclusão, mostre um modal de confirmação, antes de excluir.<br/>
+:white_check_mark: - Mostre um alert de sucesso na interface depois de executar as ações de create, update e delete <br/>
+:white_check_mark: - Use o serviços de login<br/>
+:white_check_mark: - Utilize o axios para consumir os serviços<br/>
+:white_check_mark: - Você deverá desenvolver a interface utilizando o Vuejs.<br/>
+:white_check_mark: - A interface deve ser responsiva para qualquer tela<br/>
+:white_check_mark: - A estilização deve ser feita sem o uso de qualquer framework<br/>
+:white_check_mark: - É desejável que utilize Vuex para armazenar o estado da paginação e o token de autenticação.<br/>
+:x: - Implemente os testes unitários utilizando o Jest e o Vue Test Utils<br/>
+:white_check_mark: - Utilize o npm como gerenciador de pacotes<br/>
+:white_check_mark: - Disponibilize o código em um repositório no github.<br/>
+:white_check_mark: - Publique o front na web, como sugestão: https://vercel.com/<br/>
  
 ## Screenshots
 
